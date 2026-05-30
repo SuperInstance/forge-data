@@ -290,7 +290,7 @@ impl DataDecomposer {
         }
 
         for tile in tiles {
-            for (_, v) in &tile.values {
+            for v in tile.values.values() {
                 let type_name = match v {
                     Value::Text(_) => "Text",
                     Value::Number(_) => "Number",
